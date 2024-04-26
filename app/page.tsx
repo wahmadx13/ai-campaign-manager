@@ -1,7 +1,22 @@
-import Image from "next/image";
+"use client";
+import { CopilotKit } from "@copilotkit/react-core";
+import { CopilotSidebar } from "@copilotkit/react-ui";
+import App from "@/components/app";
 
-export default function Home() {
+export default function DashboardPage() {
   return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'></main>
+    <CopilotKit url='/api/copilotkit/'>
+      <CopilotSidebar
+        instructions='Help the user create and manage ad campaigns.'
+        defaultOpen={true}
+        labels={{
+          title: "Campaign Manager Copilot",
+          initial:
+            "Hello there! I can help you manage your ad campaigns. What campaign would you like to work on?",
+        }}
+        clickOutsideToClose={false}>
+        <App />
+      </CopilotSidebar>
+    </CopilotKit>
   );
 }
