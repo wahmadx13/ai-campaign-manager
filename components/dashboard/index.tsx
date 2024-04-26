@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { PlusCircleIcon } from "@heroicons/react/24/outline";
 import { Pencil1Icon } from "@radix-ui/react-icons";
-import MainNavbar from "@/components/app/MainNavbar";
-import UserNavbar from "@/components/app/UserNavbar";
+import MainNavbar from "@/components/app/components/MainNavbar";
+import UserNavbar from "@/components/app/components/UserNavbar";
 import { ActiveCampaigns } from "./components/ActiveCampaigns";
 import { Overview } from "./components/Overview";
 import TeamSwitcher from "./components/TeamSwitcher";
